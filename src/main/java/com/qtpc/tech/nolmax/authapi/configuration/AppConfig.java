@@ -30,8 +30,8 @@ public class AppConfig {
     public static void createDefaultConfig(Path configPath) throws IOException {
         String defaultConfig = """
                 database:
-                  address: ""
-                  port: 36363
+                  address: "127.0.0.1"
+                  port: 5432
                   username: ""
                   password: ""
                   db: ""

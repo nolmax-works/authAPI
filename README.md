@@ -8,6 +8,9 @@ Designed to be used in conjunction with [nolmax's main server](https://github.co
 - On first run, the application will spawn a `config.yml` file next to the JAR executable and exit. Make sure to edit the configuration file to include the necessary server configuration and credentials.
 - Start the server again, and the app will be online at the listening address and the listening port of your choice. By default, this is `0.0.0.0:63636`.
 
+# Docker image
+- The configuration file can be inserted in the container with the path `/app/config.yml`.
+
 # Startup arguments
 There are startup arguments that override their respective options in the configuration file when specified:
 ```
