@@ -10,7 +10,7 @@ RUN gradle build --no-daemon
 FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
-RUN addgroup -S nolmax && adduser -S nolmax -G nolmax
+RUN addgroup -g 1000 -S nolmax && adduser -u 1000 -S nolmax -G nolmax
 RUN chown nolmax:nolmax /app
 COPY --from=builder --chown=nolmax:nolmax /app/build/libs/*.jar /app/authAPI.jar
 USER nolmax:nolmax
