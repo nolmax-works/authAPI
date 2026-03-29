@@ -21,7 +21,7 @@ dependencies {
     implementation("tools.jackson.dataformat:jackson-dataformat-yaml:3.1.0")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.21.2")
     implementation("io.javalin:javalin:7.1.0")
-    implementation("com.nolmax.database:Nolmax_chat:1.3.1")
+    implementation("com.nolmax.database:Nolmax_chat:1.3.2")
 }
 
 tasks.jar {
