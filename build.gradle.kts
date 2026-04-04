@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "com.qtpc.tech.nolmax.authapi"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -21,7 +21,7 @@ dependencies {
     implementation("tools.jackson.dataformat:jackson-dataformat-yaml:3.1.0")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.21.2")
     implementation("io.javalin:javalin:7.1.0")
-    implementation("com.nolmax.database:Nolmax_chat:1.3.3")
+    implementation("com.nolmax.database:Nolmax_chat:1.3.13")
 }
 
 tasks.jar {
