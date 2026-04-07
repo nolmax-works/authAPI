@@ -28,7 +28,7 @@ public class RegisterUser {
             }
         } catch (Exception e) {
             if (Main.config.server.debug) {
-                log.error("An error has occured!");
+                log.error("An error has occurred!");
                 log.error(e.getMessage());
                 ctx.status(400);
             }

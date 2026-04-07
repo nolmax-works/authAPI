@@ -18,7 +18,7 @@ public class LoginRequestToken {
             String token = userDAO.requestToken(loginData.username(), loginData.password());
             if (Main.config.server.debug) log.info("Received username is {}", loginData.username()); // no i wont reveal password 😂
             if (token != null) {
-                ctx.status(200).json(new WebserverConfig.LoginRespose(token));
+                ctx.status(200).json(new WebserverConfig.LoginResponse(token));
                 if (Main.config.server.debug) log.info("Database provided a valid (non-null) token!");
             } else {
                 ctx.status(403).result("Access denied! Invalid credentials!");
@@ -27,7 +27,7 @@ public class LoginRequestToken {
         } catch (Exception e) {
             ctx.status(400);
             if (Main.config.server.debug) {
-                log.error("An error has occured!");
+                log.error("An error has occurred!");
                 log.error(e.getMessage());
             }
         }

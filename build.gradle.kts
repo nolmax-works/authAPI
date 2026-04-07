@@ -18,10 +18,10 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("org.slf4j:slf4j-simple:2.0.17")
-    implementation("tools.jackson.dataformat:jackson-dataformat-yaml:3.1.0")
+    implementation("tools.jackson.dataformat:jackson-dataformat-yaml:3.1.1")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.21.2")
     implementation("io.javalin:javalin:7.1.0")
-    implementation("com.nolmax.database:Nolmax_chat:1.3.16")
+    implementation("com.nolmax.database:Nolmax_chat:1.3.19-SNAPSHOT")
 }
 
 tasks.jar {

@@ -1,6 +1,7 @@
 package com.qtpc.tech.nolmax.authapi.configuration;
 
 import com.qtpc.tech.nolmax.authapi.Main;
+import com.qtpc.tech.nolmax.authapi.routes.ChangePassword;
 import com.qtpc.tech.nolmax.authapi.routes.LoginRequestToken;
 import com.qtpc.tech.nolmax.authapi.routes.RegisterUser;
 import io.javalin.Javalin;
@@ -8,7 +9,8 @@ import io.javalin.Javalin;
 public class WebserverConfig {
 
     public record UserPassRequest(String username, String password) {}
-    public record LoginRespose(String token) {}
+    public record LoginResponse(String token) {}
+    public record ChangePasswordRequest(String username, String oldPassword, String newPassword) {}
 
     public static Javalin initializeConfig() {
         return Javalin.create(cfg -> {
@@ -19,6 +21,7 @@ public class WebserverConfig {
             cfg.routes.get("/", ctx -> ctx.result("hello from nolmax!"));
             cfg.routes.post("/loginRequestToken", LoginRequestToken::processRoute);
             cfg.routes.post("/registerUser", RegisterUser::processRoute);
+            cfg.routes.post("/changePassword", ChangePassword::processRoute);
         });
     }
 }
